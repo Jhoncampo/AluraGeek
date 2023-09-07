@@ -1,0 +1,109 @@
+.section-products{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+    gap: 16px;
+    padding: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.section-products .categoria{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.section-products .title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding-bottom: 16px;
+}
+.section-products .title h2{
+    font-size: 22px;
+    font-weight: 700;
+    color: #464646;
+}
+.section-products .title a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    font-size: 14px;
+    color: #2a7ae4;
+    text-decoration: none;
+    cursor: pointer;
+}
+.section-products .boxes{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+.section-products .boxes .product-box{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    width: 156px;
+}
+.section-products .boxes .product-box img{
+    width: 100%;
+    height: 174px;
+}
+.section-products .boxes .product-box h3{
+    color: #464646;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: normal;
+    font-style: normal;
+}
+.section-products .boxes .product-box h4{
+    color: #464646;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: normal;
+    font-style: normal;
+}
+.section-products .boxes .product-box a{
+    text-decoration: none;
+    font-size: 14px;
+    color: #2a7ae4;
+    cursor: pointer;
+    font-weight: 700;
+}
+@media screen and (min-width:760px) {
+    .section-products{
+        padding: 32px;
+    }
+    .section-products .categoria{
+        padding: 32px 0;
+    }
+    .section-products .categoria .title{
+        padding-bottom: 16px;
+    }
+    .section-products .boxes .product-box{
+        width: 164px;
+    }
+    .section-products .boxes{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+}
+@media screen and (min-width:761px) {
+    .section-products .boxes .product-box{
+        width: 176px;
+    }
+    .section-products .boxes{
+        justify-content: space-evenly;
+    }
+}
+

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon"  href="../img/logo.svg">
+    <title>Alura Geek</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/login.css">
+    <link rel="stylesheet" href="../assets/css/aboutUs.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+</head>
+<body>
+    
+    <header>
+        <div class="div-header">
+            <div class="logos">
+                <img src="../img/logo.svg" class="img-logo" alt="">
+                <img src="../img/aluraGeek-logo.svg" class="img-letra-logo" alt="">
+            </div>
+            <div class="search">
+                <div class="div-boton-search">
+                    <input type="search">
+                    <img src="../img/icon-search.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="search-mobile">
+            <img src="../img/icon-search.svg" alt="">
+        </div>
+    </header>
+    <main>
+        <section class="section-login">
+            <form action="">
+                <fieldset>
+                    <legend>Inciar Sesión</legend>
+                    <div class="inputs">
+                        <input type="email" name="email" class="input-select email" required placeholder="Escriba su correo electroinco" data-tipo="email">
+                        <span class="mensaje-error"></span>
+                    </div>
+                    <div class="inputs">
+                        <input type="password" name="password" class="input-select password" required placeholder="Escriba su contraseña" data-tipo="password">
+                        <span class="mensaje-error"></span>
+                    </div>
+                </fieldset>
+                <input class="input-boton" type="submit" value="Entrar">
+            </form>
+        </section>
+
+        <section class="aboutUs">
+            <div class="informacion">
+                <div class="logo">
+                    <img src="../img/logo-02.svg" alt="">
+                    <img src="../img/logo-alura-geek.svg" alt="">
+                </div>
+    
+                <ul>
+                    <li><a href="">Quienes somos</a></li>
+                    <li><a href="">Política de privacidad</a></li>
+                    <li><a href="">Programa de fidelidad</a></li>
+                    <li><a href="">Nuestras tiendas</a></li>
+                    <li><a href="">Quiero ser franquiciado</a></li>
+                    <li><a href="">Anúncie aquí</a></li>
+                </ul>
+            </div>
+            <div class="contact">
+                <form action="">
+                    <fieldset>
+                        <legend>Hable con nosotros</legend>
+                        <div class="nombre ">
+                            <label >Nombre</label>
+                            <input type="text" name="nombre" class="" data-tipo="nombre">
+                            <span class="mensaje-error"></span>
+                        </div>
+                        <div class="text-area ">
+                            <textarea name="" id="" cols="30" rows="5" placeholder="Escribe tu mensaje" data-tipo="mensaje"></textarea>
+                            <span class="mensaje-error"></span>
+                        </div>
+                    </fieldset>
+                    <input class="input-boton" type="submit" value="Enviar mensaje">
+                </form>
+            </div>
+        </section>
+
+        <footer>
+            <h4>Desarrollado por Jhon</h4>
+            <h5>2023</h5>
+        </footer>
+
+    </main>
+
+    <script src="../src/login.js" type="module"></script>
+    <script src="../src/app.js" type="module"></script>
+   
+</body>
+</html>

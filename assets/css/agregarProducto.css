@@ -1,0 +1,84 @@
+.section-agregar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #cac5c5;
+}
+.section-agregar form{
+    padding: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section-agregar form fieldset{
+    max-width: 559px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 16px;
+}
+.section-agregar form fieldset legend{
+    padding-bottom: 18px;
+    color: #464646;
+    font-weight: 700;
+    font-size: 22px;
+    font-family: 'Raleway', sans-serif;
+}
+.section-agregar form fieldset .inputs{
+    background: #ffffff;
+    padding: 11px;
+    max-width: 559px;
+    width: 100%;
+    border-radius: 4px;
+    border-bottom: 1px solid #c8c8c8;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.section-agregar form fieldset .inputs input{
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    font-weight: 400;
+    color: #464646;
+    outline: none;
+    border: none;
+    font-family: 'Raleway', sans-serif;
+}
+.section-agregar form fieldset .inputs label{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    font-family: 'Raleway', sans-serif;
+}
+.section-agregar form fieldset .text-area{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section-agregar form fieldset .text-area textarea{
+    max-width: 559px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 16px 12px 0 12px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    height: 82px;
+}
+
+.section-agregar form fieldset .input-boton{
+    max-width: 559px;
+    padding: 16px;
+    color: #ffffff;
+    background: #2a7ae4;
+    border: none;
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+}

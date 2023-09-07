@@ -1,0 +1,85 @@
+.section-login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Raleway', sans-serif;
+    background: #f5f5f5;
+}
+.section-login form{
+    padding: 90px 43px 50px ;
+}
+
+.section-login form fieldset{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+}
+.section-login form fieldset legend{
+    text-align: center;
+    padding-bottom: 18px;
+    color: #464646;
+    font-weight: 700;
+    font-size: 16px;
+}
+.section-login form fieldset .inputs{
+    background: #ffffff;
+    padding: 11px;
+    width: 250px;
+    border-radius: 4px;
+    border-bottom: 1px solid #c8c8c8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-login form fieldset  .input-vacio{
+    background: #ffffff;
+    padding: 11px;
+    width: 250px;
+    border-radius: 4px;
+    border: 1px solid red;
+    display: block;
+}
+.section-login form fieldset .lleno{
+    border: 1px solid green;
+}
+.section-login form fieldset .inputs input{
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    font-family: 'Raleway', sans-serif;
+}
+.section-login form fieldset .inputs .mensaje-error{
+    font-size: 14px;
+    color: red;
+}
+.section-login form .input-boton{
+    padding: 12px 36px;
+    color: #ffffff;
+    background: #2a7ae4;
+    margin-top: 16px;
+    width: 100%;
+    border: none;
+    font-family: 'Raleway', sans-serif;
+}
+@media screen and (min-width: 1200px){
+    .section-login form fieldset .inputs{
+        width: 400px;
+        height: 40px;
+    }
+    .section-login form{
+        padding: 92px 0 ;
+    }
+    .section-login form .input-boton{
+        width: 100%;
+    }
+    .section-login form .input-boton{
+        padding: 20px ;
+        font-size: 18px;
+    }
+}
