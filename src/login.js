@@ -12,7 +12,7 @@ const login = async () => {
     const password = document.querySelector(".password").value;
     const validarIngreso = document.querySelector(".error-ingresar")
 
-    let dato = await fetch("http://localhost:3000/users")
+    let dato = await fetch("https://my-json-server.typicode.com/Jhoncampo/AluraGeek/users")
     let dat = await dato.json()
 
     const emailIngreso = dat[0].user;
