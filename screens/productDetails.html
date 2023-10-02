@@ -3,51 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos</title>
     <link rel="icon"  href="../img/logo.svg">
+    <title> Detalle producto</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/header.css">
-    <link rel="stylesheet" href="../assets/css/products.css">
+    <link rel="stylesheet" href="../assets/css/productDetails.css">
     <link rel="stylesheet" href="../assets/css/aboutUs.css">
     <link rel="stylesheet" href="../assets/css/footer.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-    <main>
-        <header>
-            <div class="div-header">
-                <div class="logos">
-                    <img src="../img/logo.svg" class="img-logo" alt="">
-                    <img src="../img/aluraGeek-logo.svg" class="img-letra-logo" alt="">
-                </div>
-                <div class="search">
-                    <div class="div-boton-search">
-                        <input type="search">
-                        <img src="../img/icon-search.svg" alt="">
-                    </div>
+    <header>
+        <div class="div-header">
+            <div class="logos">
+                <img src="../img/logo.svg" class="img-logo" alt="">
+                <img src="../img/aluraGeek-logo.svg" class="img-letra-logo" alt="">
+            </div>
+            <div class="search">
+                <div class="div-boton-search">
+                    <input type="search" placeholder="Buscar por nombre del producto" class="input-buscar">
+                    <img src="../img/icon-search.svg" alt="" class="icono-buscar">
                 </div>
             </div>
-            
-            
-            <div class="search-mobile">
-                <input type="search">
-                <img src="../img/icon-search.svg" alt="">
-            </div>
-        </header>
+        </div>
+        <div class="search-mobile">
+            <img src="../img/icon-search.svg" alt="">
+        </div>
+    </header>
 
-        <section class="section-products">
-            <div class="title">
-                <h2>Todos los productos</h2>
-                <a href="../screens/addProducts.html"> Agregar productos</a>
+    <main>
+
+        <section class="section-detalles">
+            <div class="descripcion-producto">
+                
             </div>
-            <div class="products-box" data-productos>
+            <div class="productos-similares">
+                <h2>Productos similares</h2>
+                <div class="caja-productos-similares">
                     
-                    
+                </div>
             </div>
         </section>
+
 
         <section class="aboutUs">
             <div class="informacion">
@@ -89,7 +88,8 @@
             <h5>2023</h5>
         </footer>
     </main>
-    <script type="module" src="../controllers/client-controller.js"></script>
+    <script type="module" src="../controllers/productDetails.js"></script>
     <script src="../controllers/redireccionHome.js"></script>
+    <script src="../controllers/redireccionBuscador.js"></script>
 </body>
 </html>

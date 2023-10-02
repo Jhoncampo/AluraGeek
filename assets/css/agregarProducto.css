@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #cac5c5;
+    background: #e4e0e0;
 }
 .section-agregar form{
     padding: 16px;
@@ -39,6 +39,14 @@
     align-items: flex-start;
     flex-direction: column;
     box-sizing: border-box;
+}
+.section-agregar form fieldset .inputs select{
+    width: 100%;
+    padding: 3px;
+    font-size: 14px;
+    border: 1px solid #b9b5b5;
+    color: #464646;
+    border-radius: 4px;
 }
 .section-agregar form fieldset .inputs input{
     font-size: 16px;

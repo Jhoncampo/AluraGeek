@@ -1,19 +1,26 @@
+
+
+
 const btnLogin = document.querySelector(".input-boton");
 btnLogin.addEventListener('click', (event) =>{
     event.preventDefault();
     login();
 })
 
-const login = () => {
+const login = async () => {
     const email = document.querySelector(".email").value;
     const password = document.querySelector(".password").value;
+    const validarIngreso = document.querySelector(".error-ingresar")
 
-    const emailIngreso = "eduardcamayo13@gmail.com";
-    const paswordIngreso = "123456";
+    let dato = await fetch("http://localhost:3000/users")
+    let dat = await dato.json()
+
+    const emailIngreso = dat[0].user;
+    const paswordIngreso = dat[0].password;
 
     if ( email === emailIngreso && password === paswordIngreso){
         window.location.href = "../screens/products.html";
     }else{
-        alert("Correo o contraseña incorrectos");
+        validarIngreso.innerHTML = "contraseña o correo incorrectos"
     }
 }

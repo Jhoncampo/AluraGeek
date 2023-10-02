@@ -1,32 +1,55 @@
-const crearProducto = (nombre, imagen, precio,) =>{
-    const div = document.createElement("div")
-    div.classList.add("product-box")
-
-    const contenido =  `<div class="product-box">
-        <img src="${imagen}" alt="">
-        <h3>${nombre}</h3>
-        <h4>R$ ${precio}</h4>
-        <p>#11111111</p>
-        <i class="fa-solid fa-trash" style="color: #ffffff;"></i>
-        <i class="fa-solid fa-pencil" style="color: #ffffff;"></i>
-    </div>`
-    div.innerHTML = contenido;
-    return div
-};
-
-const productoss = document.querySelector("[data-productos]")
-
-
 const listaProductos = () =>{
-    return fetch("http://localhost:3000/productos").then(respuesta=> respuesta.json())
+    return fetch(" http://localhost:3000/productos").then((repuesta) => repuesta.json())
 }
-listaProductos().then((data) =>{
-    data.forEach( (productos) => {
-        const nuevoProducto = crearProducto(productos.nombre, productos.imagen, productos.precio)
-        productoss.appendChild(nuevoProducto)
-    });
-    
-}).catch((error)=>{
-    alert("Ocurrio un error")
-}) 
+
+const agregarProducto = (imagen, categoria, nombreProducto, precio, descripcion)=>{
+    return fetch("http://localhost:3000/productos",{
+        method: "POST",
+        headers:{
+            "content-type": "application/json"
+        },
+        body: JSON.stringify({
+            imagen,
+            categoria,
+            nombreProducto,
+            precio,
+            descripcion,
+            id: uuid.v4()
+        })
+    })
+}
+
+const eliminarProducto = (id) =>{
+    return fetch(`http://localhost:3000/productos/${id}`,{
+        method: "DELETE"
+    })
+}
+
+const detalleProducto = (id)=>{
+    return fetch(`http://localhost:3000/productos/${id}`).then( respuesta => respuesta.json())
+}
+
+const actualizarProducto = (categoria, imagen, nombreProducto, precio, descripcion, id) =>{
+    return fetch(`http://localhost:3000/productos/${id}`, {
+        method: "PUT",
+        headers: {
+            "content-type" : "application/json"
+        },
+        body: JSON.stringify({categoria, imagen, nombreProducto, precio, descripcion})
+    }).then( respuesta => respuesta).catch( error => console.log(error))
+}
+
+const categoriaProducto = (cate)=>{
+    return fetch(`http://localhost:3000/productos?categoria=${cate}`).then( respuesta => respuesta.json())
+}
+
+export  const clientServices = {
+    listaProductos,
+    agregarProducto,
+    eliminarProducto,
+    detalleProducto,
+    actualizarProducto,
+    categoriaProducto
+}
+
 

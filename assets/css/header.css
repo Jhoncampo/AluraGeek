@@ -8,12 +8,13 @@ header{
 header .div-header{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     gap: 32px;
 }
 header .div-header .logos{
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 header .div-header .search{
     display: flex;
@@ -33,13 +34,21 @@ header .div-header .search .div-boton-search input{
     border: none;
     background: #f5f5f5;
 }
+header .div-header .search .div-boton-search .icono-buscar{
+    cursor: pointer;
+}
 header a{
     text-decoration: none;
+    width: 100%;
+    font-size: 14px;
+    max-width: 166px;
     border: 1px solid #2a7ae4;
+    text-align: center;
     padding: 12px 16px;
     box-sizing: border-box;
     color: #2a7ae4;
 }
+
 @media screen and (max-width:760px){
     header .search-mobile input{
         display: none;
@@ -83,6 +92,7 @@ header a{
     }
     header .div-header{
         align-items: flex-start;
+        margin-right: 100px;
     }
     header .div-header .logos{
         display: flex;
@@ -90,10 +100,10 @@ header a{
         justify-content: center;
     }
     header .div-header .logos .img-logo{
-        width: 50px;
+        width: 37px;
     }
     header .div-header .logos .img-letra-logo{
-        width: 126px;
+        width: 120px;
     }
     header .div-header .search .div-boton-search{
         width: 363px;

@@ -30,7 +30,7 @@
             </div>
         </div>
         
-        <a href="../screens/login.html">Menú administrador</a>
+        <a href="">Menú administrador</a>
         
         <div class="search-mobile">
             <input type="search">
@@ -40,27 +40,53 @@
     <main>
 
         <section class="section-agregar">
-            <form action="">
+            <form action="" data-form id="product-form">
                 <fieldset>
                     <legend>Agregar nuevo producto</legend>
                     <div class="inputs">
                         <label for=""> Agregar imagen del producto</label>
-                        <input type="file" class="email" required >
+                        <input 
+                            type="file" 
+                            class="imagen imagen-cargada"
+                            id="product-image" 
+                            required 
+                            data-imagen >
                     </div>
                     <div class="inputs">
                         <label for="">Categoria</label>
-                        <input type="text"  class="password">
+                        <select name="" id="categoria">
+                            <option value="0" hidden selected>Seleccione una categoria</option>
+                            <option value="Star war">Star war</option>
+                            <option value="Consolas">Consolas</option>
+                            <option value="Diversos">Diversos</option>
+                        </select>
+                        
                     </div>
                     <div class="inputs">
                         <label for="">Nombre del producto</label>
-                        <input type="text" class="email" required >
+                        <input 
+                            type="text" 
+                            class="nombre-producto"
+                            id="product-name" 
+                            required 
+                            data-nombre-producto >
                     </div>
                     <div class="inputs">
                         <label for="">Precio del producto</label>
-                        <input type="number"  class="password">
+                        <input 
+                            type="number"  
+                            class="precio"
+                            id="product-precio" 
+                            data-precio>
                     </div>
                     <div class="text-area">
-                        <textarea name="" id="" cols="30" rows="10" placeholder="Descripción del producto"></textarea>
+                        <textarea 
+                        name="" 
+                        id="" 
+                        cols="30" 
+                        rows="10" 
+                        placeholder="Descripción del producto"
+                        data-descripcion></textarea>
                     </div>
                     <input class="input-boton" type="submit" value="Agregar Producto">
                 </fieldset>
@@ -84,7 +110,7 @@
                 </ul>
             </div>
             <div class="contact">
-                <form action="">
+                <form action="" >
                     <fieldset>
                         <legend>Hable con nosotros</legend>
                         <div class="nombre ">
@@ -93,7 +119,7 @@
                             <span class="mensaje-error"></span>
                         </div>
                         <div class="text-area ">
-                            <textarea name="" id="" cols="30" rows="5" placeholder="Escribe tu mensaje" data-tipo="mensaje"></textarea>
+                            <textarea cols="30" rows="5" placeholder="Escribe tu mensaje" minlength="100" data-tipo="mensaje"></textarea>
                             <span class="mensaje-error"></span>
                         </div>
                     </fieldset>
@@ -107,5 +133,9 @@
             <h5>2023</h5>
         </footer>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js" integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../controllers/addProduct-controller.js" type="module"></script>
+    <script type="module" src="../services/client-service.js"></script>
+    <script src="../controllers/redireccionHome.js"></script>
 </body>
 </html>

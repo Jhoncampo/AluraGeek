@@ -3,20 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
     <link rel="icon"  href="../img/logo.svg">
-    <title>Alura Geek</title>
+    <title>Agregar productos</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/header.css">
-    <link rel="stylesheet" href="../assets/css/login.css">
+    <link rel="stylesheet" href="../assets/css/banner.css">
+    <link rel="stylesheet" href="../assets/css/agregarProducto.css">
     <link rel="stylesheet" href="../assets/css/aboutUs.css">
     <link rel="stylesheet" href="../assets/css/footer.css">
 </head>
 <body>
-    
     <header>
         <div class="div-header">
             <div class="logos">
@@ -30,26 +29,59 @@
                 </div>
             </div>
         </div>
+        
+        <a href="../screens/login.html">Menú administrador</a>
+        
         <div class="search-mobile">
+            <input type="search">
             <img src="../img/icon-search.svg" alt="">
         </div>
     </header>
     <main>
-        <section class="section-login">
-            <form action="">
+
+        <section class="section-agregar">
+            <form action="" data-form id="product-form">
                 <fieldset>
-                    <legend>Inciar Sesión</legend>
+                    <legend> Editar producto</legend>
+                    
                     <div class="inputs">
-                        <input type="email" name="email" class="input-select email" required placeholder="Escriba su correo electroinco" data-tipo="email">
-                        <span class="mensaje-error"></span>
+                        <label for="">Categoria</label>
+                        <input 
+                            type="text" 
+                            class="categoria"
+                            id="categoria" 
+                            required 
+                            data-categoria >
+                        
                     </div>
                     <div class="inputs">
-                        <input type="password" name="password" class="input-select password" required placeholder="Escriba su contraseña" data-tipo="password">
-                        <span class="mensaje-error"></span>
+                        <label for="">Nombre del producto</label>
+                        <input 
+                            type="text" 
+                            class="nombre-producto"
+                            id="product-name" 
+                            required 
+                            data-nombre-producto >
                     </div>
+                    <div class="inputs">
+                        <label for="">Precio del producto</label>
+                        <input 
+                            type="number"  
+                            class="precio"
+                            id="product-precio" 
+                            data-precio>
+                    </div>
+                    <div class="text-area">
+                        <textarea 
+                        name="" 
+                        id="" 
+                        cols="30" 
+                        rows="10" 
+                        placeholder="Descripción del producto"
+                        data-descripcion></textarea>
+                    </div>
+                    <input class="input-boton" type="submit" value="Editar Producto">
                 </fieldset>
-                <input class="input-boton" type="submit" value="Entrar">
-                <span class="error-ingresar"></span>
             </form>
         </section>
 
@@ -70,7 +102,7 @@
                 </ul>
             </div>
             <div class="contact">
-                <form action="">
+                <form action="" >
                     <fieldset>
                         <legend>Hable con nosotros</legend>
                         <div class="nombre ">
@@ -92,12 +124,9 @@
             <h4>Desarrollado por Jhon</h4>
             <h5>2023</h5>
         </footer>
-
     </main>
-
-    <script src="../src/login.js" type="module"></script>
-    <script src="../src/app.js" type="module"></script>
-    <script type="module" src="../controllers/redireccionHome.js"></script>
-   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js" integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module" src="../controllers/updateProduct.js"></script>
+    <script src="../controllers/redireccionHome.js"></script>
 </body>
 </html>

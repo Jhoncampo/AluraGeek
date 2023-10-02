@@ -2,7 +2,6 @@ export function valida(input){
     
     const tipoInput = input.dataset.tipo;
 
-    console.log(input.parentElement)
     if(input.validity.valid === true){
         input.parentElement.classList.remove("input-vacio");
         input.parentElement.querySelector(".mensaje-error").innerHTML = ""
@@ -40,7 +39,6 @@ function mostrarMensajeError(tipoInput, input){
     
     let mensaje = ""
     tiposErrores.forEach((error) => {
-        console.log("-------",error)
         if (input.validity[error]){
         mensaje = mensajesError[tipoInput][error]
         }
