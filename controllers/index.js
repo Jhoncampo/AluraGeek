@@ -7,7 +7,7 @@ const mostraProductos = (categoria, imagen, nombre, precio, id) =>{
             
                 <img src="${imagen}" alt="">
                 <h3>${nombre}</h3>
-                <h4>R$ ${precio}</h4>
+                <h4>$ ${precio}</h4>
                 <a href="./screens/productDetails.html?id=${id}&categoria=${categoria}"> Ver producto</a>
             `
     categorias.innerHTML = producto
