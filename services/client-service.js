@@ -1,9 +1,9 @@
 const listaProductos = () =>{
-    return fetch("https://my-json-server.typicode.com/Jhoncampo/AluraGeek/productos").then((repuesta) => repuesta.json())
+    return fetch("https://alura-geek-api-red.vercel.app/productos").then((repuesta) => repuesta.json())
 }
 
 const agregarProducto = (imagen, categoria, nombreProducto, precio, descripcion)=>{
-    return fetch("https://my-json-server.typicode.com/Jhoncampo/AluraGeek/productos",{
+    return fetch("https://alura-geek-api-red.vercel.app/productos",{
         method: "POST",
         headers:{
             "content-type": "application/json"
@@ -20,17 +20,17 @@ const agregarProducto = (imagen, categoria, nombreProducto, precio, descripcion)
 }
 
 const eliminarProducto = (id) =>{
-    return fetch(`https://my-json-server.typicode.com/Jhoncampo/AluraGeek/productos/${id}`,{
+    return fetch(`https://alura-geek-api-red.vercel.app/productos/${id}`,{
         method: "DELETE"
     })
 }
 
 const detalleProducto = (id)=>{
-    return fetch(`https://my-json-server.typicode.com/Jhoncampo/AluraGeek/productos/${id}`).then( respuesta => respuesta.json())
+    return fetch(`https://alura-geek-api-red.vercel.app/productos/${id}`).then( respuesta => respuesta.json())
 }
 
 const actualizarProducto = (categoria, imagen, nombreProducto, precio, descripcion, id) =>{
-    return fetch(`https://my-json-server.typicode.com/Jhoncampo/AluraGeek/productos/${id}`, {
+    return fetch(`https://alura-geek-api-red.vercel.app/productos/${id}`, {
         method: "PUT",
         headers: {
             "content-type" : "application/json"
@@ -40,7 +40,7 @@ const actualizarProducto = (categoria, imagen, nombreProducto, precio, descripci
 }
 
 const categoriaProducto = (cate)=>{
-    return fetch(`https://my-json-server.typicode.com/Jhoncampo/AluraGeek/productos?categoria=${cate}`).then( respuesta => respuesta.json())
+    return fetch(`https://alura-geek-api-red.vercel.app/productos?categoria=${cate}`).then( respuesta => respuesta.json())
 }
 
 export  const clientServices = {
