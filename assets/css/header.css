@@ -1,27 +1,35 @@
 header{
     display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+header .div-principal{
+    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 16px;
     box-sizing: border-box;
 }
-header .div-header{
+
+header .div-principal .div-header{
     display: flex;
     align-items: center;
     justify-content: space-around;
     gap: 32px;
 }
-header .div-header .logos{
+header .div-principal .div-header .logos{
     display: flex;
     align-items: center;
     cursor: pointer;
 }
-header .div-header .search{
+header .div-principal .div-header .search{
     display: flex;
     align-items: center;
     justify-content: center;
 }
-header .div-header .search .div-boton-search{
+header .div-principal .div-header .search .div-boton-search{
     display: flex;
     align-items: center;
     padding: 8px 16px;
@@ -29,15 +37,15 @@ header .div-header .search .div-boton-search{
     border-radius: 20px;
     background: #f5f5f5;
 }
-header .div-header .search .div-boton-search input{
+header .div-principal .div-header .search .div-boton-search input{
     outline: none;
     border: none;
     background: #f5f5f5;
 }
-header .div-header .search .div-boton-search .icono-buscar{
+header .div-principal .div-header .search .div-boton-search .icono-buscar{
     cursor: pointer;
 }
-header a{
+header .div-principal a{
     text-decoration: none;
     width: 100%;
     font-size: 14px;
@@ -50,65 +58,78 @@ header a{
 }
 
 @media screen and (max-width:760px){
-    header .search-mobile input{
+    header .search-cambio{
         display: none;
     }
-    header .div-header .search .div-boton-search{
+    header .input-search-mobile{
+        outline: #2a7ae4;
+        border: 1px solid #2a7ae4;
+        padding: 4px 8px;
+        border-radius: 5px;
+        margin: 0 20px 10px;
+    }
+    header .div-principal .div-header .search .div-boton-search{
         display: none;
     }
-    header .search input, header .search img{
+    header .div-principal .search input, header .search img{
         display: none;
     }
-    header .div-header{
+    header .div-principal .div-header{
         gap: 0;
     }
 
 }
 @media screen and (min-width:761px)and (max-width:1199px){
-    header .search-mobile input, header .search-mobile{
+    header .input-search-mobile{
         display: none;
     }
-    header{
+    header .div-principal .search-mobile input, header .search-mobile{
+        display: none;
+    }
+    header .div-principal{
         padding: 16px 32px;
     }
-    header .div-header .logos .img-logo{
+    header.div-principal .div-header .logos .img-logo{
         width: 28px;
     }
-    header .div-header .logos .img-letra-logo{
+    header .div-principal .div-header .logos .img-letra-logo{
         width: 71px;
     }
 
 
 }
 @media screen and (min-width:1200px){
-    header .search-mobile{
+    header .input-search-mobile{
         display: none;
     }
-    header{
+    header .div-principal .search-mobile{
+        display: none;
+    }
+    header .div-principal{
         padding: 32px 0;
         display: flex;
         align-items: center;
         justify-content: space-evenly;
     }
-    header .div-header{
+    header .div-principal .div-header{
         align-items: flex-start;
         margin-right: 100px;
     }
-    header .div-header .logos{
+    header .div-principal .div-header .logos{
         display: flex;
         align-items: center;
         justify-content: center;
     }
-    header .div-header .logos .img-logo{
+    header .div-principal .div-header .logos .img-logo{
         width: 37px;
     }
-    header .div-header .logos .img-letra-logo{
+    header .div-principal .div-header .logos .img-letra-logo{
         width: 120px;
     }
-    header .div-header .search .div-boton-search{
+    header  .div-principaln.div-header .search .div-boton-search{
         width: 363px;
     }
-    header .div-header .search .div-boton-search input{
+    header .div-principal .div-header .search .div-boton-search input{
         width: 100%;
     }
 

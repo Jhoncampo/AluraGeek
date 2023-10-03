@@ -6,3 +6,10 @@ inputs.forEach( input => {
         valida(input.target)
     })
 })
+
+const buscar = document.querySelector(".icono-lupa")
+const inputBuscar = document.querySelector(".search-cambio")
+
+buscar.addEventListener("click", ()=>{
+    inputBuscar.classList.toggle("search-cambio")
+})

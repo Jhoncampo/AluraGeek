@@ -1,6 +1,6 @@
 import { clientServices } from "../services/client-service.js";
 
-const productoCategoria = ( imagen, nombreProducto, precio, id) =>{
+const productoCategoria = ( imagen, nombreProducto, precio, id, categoria) =>{
 
     const producto = document.createElement("div")
     producto.classList.add("producto")
@@ -8,7 +8,7 @@ const productoCategoria = ( imagen, nombreProducto, precio, id) =>{
         <img src="${imagen}" alt="">
         <h3>${nombreProducto}</h3>
         <h4>$ ${precio}</h4>
-        <a href="">Ver todo</a>
+        <a href="../screens/productDetails.html?id=${id}&categoria=${categoria}">Ver producto</a>
     `
     producto.innerHTML = detalle
     return producto
@@ -26,22 +26,22 @@ clientServices.categoriaProducto(categoria).then((datos) =>{
     if (categoria === "Star war") {
         byCategori.innerHTML = categoria
 
-        datos.forEach(({imagen, nombreProducto, precio, id}) => {
-            const productoCompleto = productoCategoria(imagen, nombreProducto, precio, id)
+        datos.forEach(({imagen, categoria, nombreProducto, precio, id}) => {
+            const productoCompleto = productoCategoria(imagen, nombreProducto, precio, id, categoria)
             cajaProductos.append(productoCompleto)
         });
     }else if(categoria === "Consolas"){
         byCategori.innerHTML = categoria
 
-        datos.forEach(({imagen, nombreProducto, precio, id, categoria}) => {
-            const productoCompleto = productoCategoria(imagen, nombreProducto, precio, id)
+        datos.forEach(({imagen, categoria, nombreProducto, precio, id}) => {
+            const productoCompleto = productoCategoria(imagen, nombreProducto, precio, id, categoria)
             cajaProductos.append(productoCompleto)
         });
     }else if(categoria === "Diversos"){
         byCategori.innerHTML = categoria
 
         datos.forEach(({imagen, nombreProducto, precio, id, categoria}) => {
-            const productoCompleto = productoCategoria(imagen, nombreProducto, precio, id)
+            const productoCompleto = productoCategoria(imagen, nombreProducto, precio, id, categoria)
             cajaProductos.append(productoCompleto)
         });
     }

@@ -16,8 +16,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-    <main>
-        <header>
+    <header>
+        <div class="div-principal">
             <div class="div-header">
                 <div class="logos">
                     <img src="../img/logo.svg" class="img-logo" alt="">
@@ -25,18 +25,20 @@
                 </div>
                 <div class="search">
                     <div class="div-boton-search">
-                        <input type="search">
-                        <img src="../img/icon-search.svg" alt="">
+                        <input type="search" placeholder="Buscar por nombre del producto" class="input-buscar">
+                        <img src="../img/icon-search.svg" alt="" class="icono-buscar">
                     </div>
                 </div>
             </div>
             
+            <a href="../screens/login.html">Login</a>
             
             <div class="search-mobile">
-                <input type="search">
-                <img src="../img/icon-search.svg" alt="">
+                <img class="icono-lupa" src="../img/icon-search.svg" alt="">
             </div>
-        </header>
+        </div>
+        <input class="input-search-mobile input-buscar search-cambio" placeholder="Buscar por nombre del producto" type="search">
+    </header>
 
         <section class="section-products">
             <div class="title">
@@ -91,5 +93,6 @@
     </main>
     <script type="module" src="../controllers/client-controller.js"></script>
     <script src="../controllers/redireccionHome.js"></script>
+    <script src="../src/app.js" type="module"></script>
 </body>
 </html>
