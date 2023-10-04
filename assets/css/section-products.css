@@ -84,11 +84,12 @@
     font-weight: 700;
     margin-bottom: 5px;
 }
-@media screen and (min-width:760px) {
+@media screen and (min-width:768px) {
     .section-products{
         padding: 32px;
     }
     .section-products .categoria{
+        max-width: 1069px;
         padding: 32px 0;
     }
     .section-products .categoria .title{
@@ -99,18 +100,9 @@
     }
     .section-products .boxes{
         display: flex;
-        justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
         gap: 16px;
-    }
-}
-@media screen and (min-width:761px) {
-    .section-products .boxes .product-box{
-        width: 176px;
-    }
-    .section-products .boxes{
-        justify-content: space-evenly;
     }
 }
 

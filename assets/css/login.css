@@ -73,6 +73,9 @@
     border: none;
     font-family: 'Raleway', sans-serif;
 }
+.section-login form .input-boton:hover{
+    background: #1d559e;
+}
 .section-login form span{
     color: red;
     box-sizing: border-box;

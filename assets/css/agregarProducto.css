@@ -90,3 +90,8 @@
     width: 100%;
     font-family: 'Raleway', sans-serif;
 }
+.section-agregar form fieldset .input-boton:hover{
+    background: #185ab1;
+    font-size: 14px;
+    transition: 0.4s;
+}

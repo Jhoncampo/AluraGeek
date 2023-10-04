@@ -56,6 +56,11 @@ header .div-principal a{
     box-sizing: border-box;
     color: #2a7ae4;
 }
+header .div-principal a:hover{
+    background: #2a7ae4;
+    color: #ffffff;
+    transition: 0.3s;
+}
 
 @media screen and (max-width:760px){
     header .search-cambio{

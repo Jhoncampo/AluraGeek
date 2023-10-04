@@ -41,6 +41,9 @@
     background: #2a7ae4;
     color: #FFFFFF;
 }
+.banner .info a:hover{
+    background: #1756a8;
+}
 @media  screen and (min-width:760px) {
     .banner{
         height: 352px;
